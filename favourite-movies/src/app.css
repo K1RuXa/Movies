@@ -1,0 +1,149 @@
+/* Обнуляем стандартные отступы и настраиваем шрифт */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    /* Светлый фон по умолчанию */
+    color: #000000;
+    /* Цвет текста по умолчанию */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Плавный переход фона и текста */
+}
+
+/* Основной контейнер приложения */
+.app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    color: inherit;
+    /* Наследуем цвет текста от body */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Стили для списка фильмов */
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Стили для каждого элемента фильма */
+.movie-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-item:hover {
+    transform: translateY(-5px);
+}
+
+.movie-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Информация о фильме */
+.movie-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-info h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: inherit;
+    /* наследует цвет от body */
+    font-weight: 600;
+}
+
+.movie-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: inherit;
+    opacity: 0.8;
+}
+
+.show-rate {
+    color: inherit;
+    font-weight: bold;
+}
+
+/* Темная и светлая тема */
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+    min-height: 100vh;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Кнопка смены темы */
+.theme-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Изображение кнопки */
+.theme-button img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+
+
+/* Заголовок секции */
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
